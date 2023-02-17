@@ -31,16 +31,24 @@
     {% endblock %}
 
     <title>Boutique Ado {% extra title %}{% endblock %}</title>
-
-    <header class="container-fluid fixed-top"></header>
-    {% if messages %}
-    <div class="message-container"></div>
-    {% endif %}
     
   </head>
 
   <body>
-    <h1>Hello, world!</h1>
+    <header class="container-fluid fixed-top"></header>
+
+    {% if messages %}
+        <div class="message-container"></div>
+    {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
+
+    {% block content %}
+    {% endblock %}
+
+    {% block postloadjs %}
+    {% endblock %}
 
 
   </body>
