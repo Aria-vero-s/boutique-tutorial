@@ -65,6 +65,10 @@ body {
     color: #000 !important;
 }
 
+.text-white {
+    color: #fff !important;
+}
+
 .border-black {
     border: 1px solid black !important;
 }
