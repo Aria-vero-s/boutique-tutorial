@@ -11,8 +11,17 @@ body {
 }
 
 a {
-    color: #000 !important;
+    color: hotpink !important;
     text-decoration: none;
+}
+
+/* mailchimp */
+
+#mc_embed_signup {
+    background:#fff;
+    clear:left;
+    font:14px Lato;
+    padding:0px;
 }
 
 /* from Bulma */
