@@ -26,10 +26,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
+# Note to self: DEBUG True needs to be commented out and line 30 and 31 needs to be back in before deploying to heroku
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = 'DEVELOPMENT' in os.environ
-development = os.environ.get('DEVELOPMENT', False)
-DEBUG = development
+# development = os.environ.get('DEVELOPMENT', False)
+DEBUG = True
 
 ALLOWED_HOSTS = ['boutique-ari.herokuapp.com', 'localhost']
 
@@ -173,7 +174,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
@@ -182,29 +183,31 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 FREE_DELIVERY_THRESHOLD = 50
 STANDARD_DELIVERY_PERCENTAGE = 10
 
-if 'USE_AWS' in os.environ:
-    # Cache control
-    AWS_S3_OBJECT_PARAMETERS = {
-        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
-        'CacheControl': 'max-age=94608000',
-    }
+# Note to self: line 187 to 212 needs to be back in before deploying to heroku
 
-    # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = 'boutique-ari'
-    AWS_S3_REGION_NAME = 'us-east-1'
-    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+# if 'USE_AWS' in os.environ:
+#     # Cache control
+#     AWS_S3_OBJECT_PARAMETERS = {
+#         'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+#         'CacheControl': 'max-age=94608000',
+#     }
 
-    # Static and media files
-    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-    STATICFILES_LOCATION = 'static'
-    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
-    MEDIAFILES_LOCATION = 'media'
+#     # Bucket Config
+#     AWS_STORAGE_BUCKET_NAME = 'boutique-ari'
+#     AWS_S3_REGION_NAME = 'us-east-1'
+#     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+#     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+#     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
 
-    # Override static and media URLs in production
-    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
-    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+#     # Static and media files
+#     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+#     STATICFILES_LOCATION = 'static'
+#     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+#     MEDIAFILES_LOCATION = 'media'
+
+#     # Override static and media URLs in production
+#     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+#     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
 
 
 # Stripe
