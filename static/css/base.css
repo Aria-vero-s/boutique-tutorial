@@ -16,8 +16,9 @@ a {
 }
 
 a:hover {
-    color: grey;
+    color: grey !important;
     text-decoration: none;
+    transition: 0.3s;
 }
 
 /* from Bulma */
@@ -79,8 +80,20 @@ a:hover {
     border: 1px solid black !important;
 }
 
-.bg-black {
-    background: #000 !important;
+.footer-bg-black {
+    background-color: #000 !important;
+}
+
+.footer-bg-black a {
+    color: #FFF !important;
+}
+
+.bg-black-top .logo-font {
+    color: white !important;
+}
+
+.bg-black-top a {
+    color: #000 !important;
 }
 
 .overlay {
@@ -340,10 +353,14 @@ input[name='q']::placeholder {
 
 /* footer */
 
-footer {
-    padding-top: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
+.footer {
+    padding: 80px;
+}
+
+@media (max-width: 900px) {
+    .footer {
+        padding: 20px;
+    }
 }
 
 #social i {
@@ -352,20 +369,30 @@ footer {
 }
 
 @media (max-width: 900px) {
-    footer {
-        padding: 20px;
+    #social {
+        padding-bottom: 40px;
     }
 }
 
 @media (max-width: 500px) {
-    footer {
-        padding: 0;
+    #social {
+        padding-bottom: 40px;
     }
+}
+
+/* search */
+.form-control {
+    background-color:white;
+    color:black;
 }
 
 /* mailchimp */
 .mc-field-group {
     width: 100% !important;
+}
+
+.asterisk {
+    color: black !important;
 }
 
 form {
@@ -378,4 +405,8 @@ form {
 
 #mc-embedded-subscribe-form .button:hover {
     background-color: grey !important;
+}
+
+.empty-container {
+    padding-bottom:100px;
 }

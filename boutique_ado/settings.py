@@ -28,9 +28,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # Note to self: DEBUG True needs to be commented out and line 30 and 31 needs to be back in before deploying to heroku
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = 'DEVELOPMENT' in os.environ
-# development = os.environ.get('DEVELOPMENT', False)
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
+development = os.environ.get('DEVELOPMENT', False)
 
 ALLOWED_HOSTS = ['boutique-ari.herokuapp.com', 'localhost']
 
@@ -173,15 +172,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+# Note to self: line 178 to 185 needs to be back in before deploying to heroku
+
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-FREE_DELIVERY_THRESHOLD = 50
-STANDARD_DELIVERY_PERCENTAGE = 10
 
 # Note to self: line 187 to 212 needs to be back in before deploying to heroku
 

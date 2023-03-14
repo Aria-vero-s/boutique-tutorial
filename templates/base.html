@@ -39,28 +39,24 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-        <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
+        <div id="topnav" class="row bg-black-top pt-lg-2 d-none d-lg-flex">
+            <!-- logo -->
+            <div class="col-8 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Modus</strong> Design</h2>
+                    <h2 class="logo-font text-white my-0"><strong>Modus</strong> Design</h2>
                 </a>
             </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <form method="GET" action="{% url 'products' %}">
-                    <div class="input-group w-100">
-                        <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
-                        <div class="input-group-append">
-                            <button class="form-control btn btn-black border border-black rounded-0" type="submit">
-                                <span class="icon">
-                                    <i class="fas fa-search"></i>
-                                </span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <!-- navbar -->
+            <nav class="navbar navbar-expand-lg">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                {% include 'includes/mobile_top_header.html' %}
+                {% include 'includes/main_nav.html' %}
+            </nav>
+            <!-- account icon -->
+            <div class="my-auto py-1 py-lg-0">
+                <ul class="list-inline list-unstyled text-lg-right my-0">
                     <li class="list-inline-item dropdown">
                         <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
@@ -81,36 +77,8 @@
                             {% endif %}
                         </div>
                     </li>
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
-                            <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                        $0.00
-                                    {% endif %}
-                                </p>
-                            </div>
-                        </a>
-                    </li>
                 </ul>
-            </div>
-        </div>
-        <div class="row bg-white">
-            <nav class="navbar navbar-expand-lg navbar-light w-100">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                {% include 'includes/mobile_top_header.html' %}
-                {% include 'includes/main_nav.html' %}
             </nav>
-        </div>
-        <div id="delivery-banner" class="row text-center">
-            <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
-            </div>            
         </div>
     </header>
 
@@ -164,7 +132,7 @@
                             <div class="indicates-required"></div>
                             <div class="mc-field-group">
                                 <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>
-                                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" required>
+                                <input type="email" value="" name="EMAIL" class="required email rounded-0" id="mce-EMAIL" required>
                                 <span id="mce-EMAIL-HELPERTEXT" class="helper_text"></span>
                             </div>
                             <div id="mce-responses" class="clear foot">
@@ -174,7 +142,7 @@
                             <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_2e9377371cc577d152248cadd_771e91f781" tabindex="-1" value=""></div>
                                 <div class="optionalParent">
                                     <div class="clear foot">
-                                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button">
+                                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button rounded-0">
                                     </div>
                                 </div>
                             </div>
@@ -184,14 +152,34 @@
                 </div>
             </div>
         </div>
-    </div>
-      <footer class="bg-white text-black">
-        <div class="text-center p-3">
-          @ 2023 Made by: <a class="textGradient" href="https://github.com/Aria-vero-s">aria-vero-s</a><br>
-          <a href ="https://www.privacypolicygenerator.info/live.php?token=lx1Nwh7vdojPRxFPWkJwoluEpSHI13pM" target="_blank">Privacy Notice</a>
+    </footer>
+    <footer class="footer-bg-black text-white">
+        <div class="footer container-fluid pt-3">
+            <div class="row">
+                <div class="col-md-6">
+                    <form method="GET" action="{% url 'products' %}">
+                        <div class="input-group">
+                            <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search">
+                            <div class="input-group-append">
+                                <button class="form-control btn btn-black border border-black rounded-0" type="submit">
+                                    <span class="icon">
+                                        <i class="fas fa-search"></i>
+                                    </span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 text-left">
+                    @ 2023 Made by: <a href="https://github.com/Aria-vero-s" target="_blank">aria-vero-s</a><br>
+                    <a href ="https://www.privacypolicygenerator.info/live.php?token=lx1Nwh7vdojPRxFPWkJwoluEpSHI13pM" target="_blank">Privacy Notice</a>
+                </div>
+            </div>
         </div>
     </footer>
     {% endblock %}
+
+    <div class="empty-container"></div>
 
     {% block postloadjs %}
     <script type="text/javascript">
