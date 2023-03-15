@@ -1,4 +1,4 @@
-<nav class="collapse navbar-collapse" id="main-nav">
+<div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item d-block d-md-none">
             <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'home' %}" id="home-link"></a>
@@ -51,3 +51,25 @@
         </li>
     </ul>
 </div>
+<ul class="list-inline list-unstyled">
+                        <li class="list-inline-item dropdown">
+                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <div class="text-center text-white">
+                                    <div><i class="fas fa-user fa-lg"></i></div>
+                                    <p class="my-0">My Account</p>
+                                </div>
+                            </a>
+                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                                {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                    {% endif %}
+                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                {% else %}
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                    </ul>
