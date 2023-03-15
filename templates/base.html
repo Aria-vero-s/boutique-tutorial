@@ -38,39 +38,18 @@
     <title>Modus Design {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <header class="fixed-top" style="background-color: black;">
+    <header class="fixed-top">
         <div class="row">
             <div class="col-12">
                 <!-- navbar -->
                 <nav class="navbar navbar-expand-lg">
-                    <button class="navbar-toggler btn-white" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-dark navbar-toggler border" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <!-- logo -->
                     <a href="{% url 'home' %}"><h2 class="logo-font">Modus Design</h2></a>
+                    <!-- links -->
                     {% include 'includes/main_nav.html' %}
-                    <ul class="list-inline list-unstyled">
-                        <li class="list-inline-item dropdown">
-                            <a class="nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <div class="text-center text-white">
-                                    <div><i class="fas fa-user fa-lg"></i></div>
-                                    <p class="my-0">My Account</p>
-                                </div>
-                            </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                                {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                        <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                    {% endif %}
-                                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                                {% else %}
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                                {% endif %}
-                            </div>
-                        </li>
-                    </ul>
                 </nav>
             </div>
         </div>
@@ -101,7 +80,7 @@
     {% endblock %}
 
     {% block footer %}
-    <footer class="bg-white text-black">
+    <footer class="bg-white w-100">
         <div class="footer container-fluid pt-3">
             <!-- Grid row -->
             <div class="row text-left">
@@ -117,8 +96,8 @@
                 </div>
                 <!-- Grid column -->
                 <div class="col-md-6">
-                    <h3>Subscribe</h3>
-                    <p>Get exclusive offers and discount codes by subscribing to my monthly newsletter</p>
+                    <h3>Newsletter subscription</h3>
+                    <p>Get exclusive offers and discount codes</p>
                     <!-- Begin Mailchimp Signup Form -->
                     <div id="mc_embed_signup">
                         <form action="https://gmail.us21.list-manage.com/subscribe/post?u=2e9377371cc577d152248cadd&amp;id=771e91f781&amp;f_id=00cb95e1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
