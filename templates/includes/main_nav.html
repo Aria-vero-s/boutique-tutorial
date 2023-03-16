@@ -4,7 +4,7 @@
             <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'home' %}" id="home-link"></a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#about">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'home' %}#about">
                 About
             </a>
         </li>
@@ -14,10 +14,10 @@
                 Graphic design
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="design-link">
-                <a href="{% url 'products' %}?category=print,publishing" class="dropdown-item">Print & publishing designs</a>
-                <a href="{% url 'products' %}?category=website" class="dropdown-item">Website design</a>
-                <a href="{% url 'products' %}?category=branding" class="dropdown-item">Branding design</a>
-                <a href="{% url 'products' %}?category=full" class="dropdown-item">Full package design</a>
+                <a href="{% url 'print-publishing' %}" class="dropdown-item">Print & publishing designs</a>
+                <a href="{% url 'website' %}" class="dropdown-item">Website design</a>
+                <a href="{% url 'illustration' %}" class="dropdown-item">Illustration design</a>
+                <a href="{% url 'full-package' %}" class="dropdown-item">Full package design</a>
             </div>
         </li>
 
@@ -28,7 +28,7 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link mr-5" href="#contact">
+            <a class="logo-font font-weight-bold nav-link mr-5" href="{% url 'home' %}#contact">
                 Contact
             </a>
         </li>

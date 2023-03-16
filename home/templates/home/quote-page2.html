@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-black my-5" style="text-transform:uppercase">Get a quote</h1>
+                <h2 class="text-black">Describe the design you need</h2>
+               <p>Please provide as much information as possible about your business / product / service.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid col-12 bg-white h-100">
+        <div class="row w-100">
+            <div class="container text-black py-5">
+
+                <form method="GET" action="" class="signup-form">
+                
+                <label for="fname">Name of your project</label>
+                <input id="fname" class="text-input" name="first_name" type="text" required>
+
+                <label for="service">Choose a service:</label>
+                <select id="service" class="text-input" name="service" required>
+                  <option value="print-publishing">Print & publishing designs</option>
+                  <option value="website">Website design</option>
+                  <option value="illustration">Illustration design</option>
+                  <option value="full-package">Full package design</option>
+                </select>
+
+                <p>
+                if
+                print & publishing designs<br>
+                Select what you need (you may select more than one)<br>
+                - brochures (quantity:25) = £25<br>
+                - A5 flyers (quantity:25) = £21<br>
+                - envelopes (quantity:25) = £42<br>
+                - T-shirts (quantity:10) = £50<br>
+                - stickers (quantity:25) = £15<br>
+                <!-- (These prices are calculated by https://www.helloprint.co.uk/) -->
+                if
+                website design<br>
+                Select what you need<br>
+                - 5 pages website for small business = £60<br>
+                - New Look! Existing website redesign = £50<br>
+                if
+                Illustration (digital products)<br>
+                Select what you need<br>
+                - Single music album cover<br>
+                - Single book cover<br>
+                - Social media banner<br>
+                if
+                Full package<br>
+                Select what you need<br>
+                - Single music album cover<br>
+                - Single book cover<br>
+                - Social media banner<br>
+
+                <br>
+                Select the package you prefer:<br>
+                bronze package: £30<br>
+                - 3 different design choices for each product<br>
+                - Up to 3 revisions<br>
+                - £5 unrefundable deposit<br>
+                - Final product Money Back Guarantee<br>
+                - Copyright Ownership of 1 Design<br>
+                </p>
+                <br>
+                silver package: £45<br>
+                - 6 different design choices<br>
+                - Unlimited revisions<br>
+                - £10 unrefundable deposit<br>
+                - Final product Money Back Guarantee<br>
+                - Copyright Ownership of 1 Design<br>
+                </p>
+                gold package: £60<br>
+                - 10 different design choices<br>
+                - Unlimited revisions<br>
+                - £15 unrefundable deposit<br>
+                - Final product Money Back Guarantee<br>
+                - Copyright Ownership of 1 Design<br>
+                </p>
+
+                <p>Your total: (total price goes here)
+                Continue to checkout and registration
+
+                Please provide your contact information
+                Do you already have an account? Login here
+                
+                Please provide your payment information</p>
+
+                <br><br>
+                <label for="comment">Description:</label>
+                <textarea id="comment" class="text-input" name="comment" type="text" style="height:100px; color:grey">Example: “Our company is named _ and is based in _ . We provide _ to our consumers and we need a new (type of service). We would like the design to be _ and to communicate (values).
+                </textarea>
+                
+                <label for="email">Email Address</label>
+                <input type="email" class="text-input" id="email" name="email_address" required>
+                <br><br>
+                <input class="btn btn-lg centered-button rounded-0" type="submit" value="Next">
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block postloadjs %}
+
+{% endblock %}

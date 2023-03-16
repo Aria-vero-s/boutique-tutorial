@@ -46,13 +46,13 @@ a:hover {
     width: fit-content;
 }
 
-.shop-now-button {
+.quote-button {
     background: black;
     color: white !important;
     min-width: 260px;
 }
 
-.portfolio-button {
+.centered-button {
     background: black;
     color: white !important;
     max-width: 260px;
@@ -78,9 +78,9 @@ a:hover {
     color: white !important;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
+.quote-button:hover,
+.quote-button:active,
+.quote-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
