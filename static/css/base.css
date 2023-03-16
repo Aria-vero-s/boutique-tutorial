@@ -102,6 +102,63 @@ a:hover {
 	z-index: -1;
 }
 
+#project-right img {
+    float: right;
+    width: 30%;
+    height:auto;
+    margin-left:30px; 
+    margin-bottom: 30px;
+  }
+
+#project-left img {
+    float: left;
+    width: 30%;
+    height:auto;
+    margin-right:30px; 
+    margin-bottom: 30px;
+  }
+
+@media (max-width: 412px) {
+    #project-right img {
+        margin-left:10px; 
+        margin-bottom:10px;
+    }
+}
+
+@media (max-width: 412px) {
+    #project-left img {
+        margin-right:10px; 
+        margin-bottom:10px;
+    }
+}
+
+@media (max-width: 412px) {
+    #project img {
+        width: 100%;
+        height: auto;
+    }
+  }
+
+.project-button-white {
+    background: white;
+    color: black !important;
+    text-transform: uppercase;
+    font-size: medium;
+    text-align: left;
+    border:grey 1px solid;
+    padding:30px;
+}
+
+.project-button-black {
+    background: black;
+    color: white !important;
+    text-transform: uppercase;
+    font-size: medium;
+    text-align: left;
+    border:grey 1px solid;
+    padding:30px;
+}
+
 a.category-badge > span.badge:hover {
     background: #212529 !important;
     color: #fff !important;
