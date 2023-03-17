@@ -11,6 +11,44 @@ body {
     font-family: 'Lato';
 }
 
+a:hover {
+    color: grey !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.fixed-top {
+    background-color: #000;
+}
+
+.dropdown-item a {
+    color:black !important;
+}
+
+.header-white {
+    text-transform: uppercase;
+    color:white;
+}
+
+.header-black {
+    text-transform: uppercase;
+    color:black;
+}
+
+.bg-black {
+    background-color:black;
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
 #about img {
     float: right;
     width: 30%;
@@ -22,29 +60,6 @@ body {
         height: auto;
     }
   }
-
-a:hover {
-    color: grey !important;
-    text-decoration: none;
-    transition: 0.3s;
-}
-
-.fixed-top {
-    background-color: #000;
-}
-
-.logo-font {
-    text-transform: uppercase;
-    color:white;
-}
-
-.bg-black {
-    background-color:black;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
 
 .quote-button {
     background: black;
@@ -88,18 +103,14 @@ a:hover {
     color: white;
 }
 
-.border-black {
-    border: 1px solid black !important;
+.content-border {
+    border: solid 1px black;
+    padding: 30px;
+    text-align: center;
 }
 
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+.border-black {
+    border: 1px solid black !important;
 }
 
 #project-right img {
@@ -421,6 +432,10 @@ form {
 }
 
 /* Form */
+
+.form a {
+    color: black !important;
+}
 
 .signup-form {
     color:black;

@@ -6,21 +6,39 @@
     <div class="container mt-5">
         <div class="row">
             <div class="col">
-                <h1 class="text-black my-5" style="text-transform:uppercase">Get a quote</h1>
-                <h2 class="text-black">Describe the design you need</h2>
-               <p>Please provide as much information as possible about your business / product / service.</p>
+                <h1 class="header-black my-5" style="text-transform:uppercase">Get a quote</h1>
+                <h2 class="header-black">Please select a type of service and a package</h2>
+                <p>
+                bronze package: £30<br>
+                - 3 different design choices for each product<br>
+                - Up to 3 revisions<br>
+                - £5 unrefundable deposit<br>
+                - Final product Money Back Guarantee<br>
+                - Copyright Ownership of 1 Design<br>
+                <br>
+                silver package: £45<br>
+                - 6 different design choices<br>
+                - Unlimited revisions<br>
+                - £10 unrefundable deposit<br>
+                - Final product Money Back Guarantee<br>
+                - Copyright Ownership of 1 Design<br>
+                <br>
+                gold package: £60<br>
+                - 10 different design choices<br>
+                - Unlimited revisions<br>
+                - £15 unrefundable deposit<br>
+                - Final product Money Back Guarantee<br>
+                - Copyright Ownership of 1 Design<br>
+                </p>
             </div>
         </div>
     </div>
     <div class="container-fluid col-12 bg-white h-100">
         <div class="row w-100">
-            <div class="container text-black py-5">
+            <div class="container py-5">
 
-                <form method="GET" action="" class="signup-form">
+                <form method="GET" action="{% url 'quote-page2' %}" class="signup-form">
                 
-                <label for="fname">Name of your project</label>
-                <input id="fname" class="text-input" name="first_name" type="text" required>
-
                 <label for="service">Choose a service:</label>
                 <select id="service" class="text-input" name="service" required>
                   <option value="print-publishing">Print & publishing designs</option>
@@ -30,12 +48,12 @@
                 </select>
 
                 <br><br>
-                <label for="comment">Description:</label>
-                <textarea id="comment" class="text-input" name="comment" type="text" style="height:100px; color:grey">Example: “Our company is named _ and is based in _ . We provide _ to our consumers and we need a new (type of service). We would like the design to be _ and to communicate (values).
-                </textarea>
-                
-                <label for="email">Email Address</label>
-                <input type="email" class="text-input" id="email" name="email_address" required>
+                <label for="package">Choose a package:</label>
+                <select id="package" class="text-input" name="package" required>
+                  <option value="website">Bronze</option>
+                  <option value="illustration">Silver</option>
+                  <option value="full-package">Gold</option>
+                </select>
                 <br><br>
                 <input class="btn btn-lg centered-button rounded-0" type="submit" value="Next">
 

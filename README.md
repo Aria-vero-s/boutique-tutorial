@@ -14,8 +14,7 @@ Modus Design, project 5 description here.
 ## Ressources
 
 **Media**
-
-Homepage image:
+Homepage :
 
 - https://unsplash.com/fr/photos/5GwLlb-_UYk
 
