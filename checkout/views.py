@@ -11,8 +11,9 @@ from profiles.models import UserProfile
 from profiles.forms import UserProfileForm
 from bag.contexts import bag_contents
 
-import stripe
 import json
+import stripe
+stripe.api_key = "pk_test_51MeI8oHHiHxZZeisfyaj0ve6hLLGFoghsOmi6pcRBeSA1lQudiffUSaCTscONmaUBwj6c6ld1KOHLSB62CY4hFKo00jiQ3Eh00"
 
 
 @require_POST

@@ -8,7 +8,13 @@
             <div class="col">
                 <h1 class="header-black my-5" style="text-transform:uppercase">Get a quote</h1>
                 <h2 class="header-black">Please select a type of service and a package</h2>
-                <p>
+                <p>Test
+                {% if request.user.is_authenticated %}
+                    {% for quote in quotes %}
+                    <h2>Welcome, {{ quote.user }}</h2>
+                    {% endfor %}<br>
+                {% endif %}
+                <br>
                 bronze package: £30<br>
                 - 3 different design choices for each product<br>
                 - Up to 3 revisions<br>
@@ -36,11 +42,10 @@
     <div class="container-fluid col-12 bg-white h-100">
         <div class="row w-100">
             <div class="container py-5">
-
-                <form method="GET" action="{% url 'quote-page2' %}" class="signup-form">
-                
+                <form method="POST" action="{% url 'quote' %}" class="signup-form">
+                {% csrf_token %}
                 <label for="service">Choose a service:</label>
-                <select id="service" class="text-input" name="service" required>
+                <select id="service" name="service" required>
                   <option value="print-publishing">Print & publishing designs</option>
                   <option value="website">Website design</option>
                   <option value="illustration">Illustration design</option>
@@ -49,15 +54,22 @@
 
                 <br><br>
                 <label for="package">Choose a package:</label>
-                <select id="package" class="text-input" name="package" required>
-                  <option value="website">Bronze</option>
-                  <option value="illustration">Silver</option>
-                  <option value="full-package">Gold</option>
+                <select id="package" name="package" required>
+                  <option value="bronze">Bronze</option>
+                  <option value="silver">Silver</option>
+                  <option value="gold">Gold</option>
                 </select>
                 <br><br>
                 <input class="btn btn-lg centered-button rounded-0" type="submit" value="Next">
 
                 </form>
+                {% for quote in quotes %}
+                    <p>
+                    You selected:<br>
+                    Service: {{ quote.service }}<br>
+                    Package: {{ quote.package }}<br>
+                    </p>
+                {% endfor %}
             </div>
         </div>
     </div>

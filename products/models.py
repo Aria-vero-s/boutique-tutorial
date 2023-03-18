@@ -1,11 +1,40 @@
 from django.db import models
 
-# Create your models here.
+
+from django.contrib.auth.models import User
+from django import forms
+from datetime import datetime
+from django.utils import timezone
+
+SERVICE = (
+    ("print-publishing", "print-publishing"),
+    ("website", "website"),
+    ("illustration", "illustration"),
+    ("full-package", "full-package"),
+    )
+
+PACKAGE = (
+    ("bronze", "bronze"),
+    ("silver", "silver"),
+    ("gold", "gold"),
+)
+
+
+class Quote(models.Model):
+    user = models.ForeignKey(User, null=False, blank=False, on_delete=models.CASCADE)
+    service = models.CharField(max_length=50, choices=SERVICE, blank=False, null=False)
+    package = models.CharField(max_length=50, choices=PACKAGE, blank=False, null=False)
+    time_ordered = models.DateTimeField(default=datetime.now, blank=True)
+
+    def __str__(self):
+        return f"service: {self.service} | package: {self.package}"
+
+
 class Category(models.Model):
 
     class Meta:
         verbose_name_plural = 'Categories'
-        
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -27,3 +56,4 @@ class Product(models.Model):
 
     def __str__(self):
         return self.name
+

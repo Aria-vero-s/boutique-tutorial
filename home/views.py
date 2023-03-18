@@ -12,10 +12,6 @@ def portfolio(request):
     return render(request, "home/portfolio.html", {})
 
 
-def quote(request):
-    return render(request, "home/quote.html", {})
-
-
 def quote_page2(request):
     return render(request, "home/quote-page2.html", {})
 

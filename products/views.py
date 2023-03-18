@@ -7,6 +7,16 @@ from django.db.models.functions import Lower
 from .models import Product, Category
 from .forms import ProductForm
 
+from datetime import datetime, timedelta
+from .models import *
+from django.urls import path
+from . import views
+from django.contrib.auth import authenticate, login, logout
+from .forms import QuoteForm
+from .models import Quote
+from django.views.generic import ListView
+from django.views import generic
+
 # Create your views here.
 
 def all_products(request):
@@ -137,3 +147,31 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def quote_created(request):
+    return render(request, "products/quote-created.html", {})
+
+
+def quote(request):
+    quotes = Quote.objects.all()
+    context = {
+        'quotes': quotes
+    }
+    if request.method == 'POST':
+
+        service = request.POST.get('service')
+        package = request.POST.get('package')
+
+        # Store service and package in django session:
+        request.session['service'] = service
+        request.session['package'] = package
+
+        QuoteForm = Quote.objects.get_or_create(
+            service=service,
+            package=package,
+            user=request.user,
+        )
+        messages.success(request, "Quote Created!")
+        return redirect('quote')
+    return render(request, 'products/quote.html', context)
