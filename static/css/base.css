@@ -108,7 +108,7 @@ a:hover {
     color: white;
 }
 
-.card p {
+.card-service {
     min-height: 150px;
 }
 

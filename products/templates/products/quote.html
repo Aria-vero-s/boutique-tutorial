@@ -21,15 +21,16 @@
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title"><i class="fa-regular fa-address-card"></i></h1>
-                            <p>
-                                Crafting a strong brand identity isn't easy! Designers have the important task of finding the perfect visual identity to represent a company or product.
-                            </p>
-                            <ul class="text-align-left mt-3 mb-4">
-                                <li>Brochures</li>
-                                <li>A5 flyers</li>
-                                <li>T-shirts...</li>
-                            </ul>
-                        <button type="button" service="branding" class="w-100 btn btn-lg btn-outline-black">Select this service</button>
+                        <div class="card-service">
+                            Crafting a strong brand identity isn't easy! Designers have the important task of finding the perfect visual identity to represent a company or product.
+                        </div>
+                        <ul class="text-align-left mt-3 mb-4">
+                            <li>Brochures</li>
+                            <li>A5 flyers</li>
+                            <li>T-shirts...</li>
+                        </ul>
+                        
+                        <button type="button" service="branding" class="div-link w-100 btn btn-lg btn-outline-black">Select this service</button>
                     </div>
                 </div>
             </div>
@@ -41,15 +42,16 @@
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title"><i class="fa-sharp fa-solid fa-desktop"></i></h1>
-                            <p>
-                                Web designers use their creative powers to make sure your digital experiences are seamless and enjoyable while tying in the client's unique branding.
-                            </p>
-                            <ul class="text-align-left mt-3 mb-4">
-                                <li>Website</li>
-                                <li>Blog</li>
-                                <li>Online portfolio...</li>
-                            </ul>
-                        <button type="button" service="website" class="w-100 btn btn-lg btn-outline-black">Select this service</button>
+                        <div class="card-service">
+                            Web designers use their creative powers to make sure your digital experiences are seamless and enjoyable while tying in the client's unique branding.
+                        </div>
+                        <ul class="text-align-left mt-3 mb-4">
+                            <li>Website</li>
+                            <li>Blog</li>
+                            <li>Online portfolio...</li>
+                        </ul>
+
+                        <button type="button" service="website" class="div-link w-100 btn btn-lg btn-outline-black">Select this service</button>
                     </div>
                 </div>
             </div>
@@ -61,15 +63,16 @@
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title"><i class="fa-solid fa-book"></i></h1>
-                            <p>
-                                Illustrations capture the attention of your target market with beautiful book and magazine covers, plus creative page layouts.
-                            </p>
-                            <ul class="text-align-left mt-3 mb-4">
-                                <li>Album cover</li>
-                                <li>Magazine images</li>
-                                <li>Storybook...</li>
-                            </ul>
-                        <button type="button" service="illustration" class="w-100 btn btn-lg btn-outline-black">Select this service</button>
+                        <div class="card-service">
+                            Illustrations capture the attention of your target market with beautiful book and magazine covers, plus creative page layouts.
+                        </div>
+                        <ul class="text-align-left mt-3 mb-4">
+                            <li>Album cover</li>
+                            <li>Magazine images</li>
+                            <li>Storybook...</li>
+                        </ul>
+
+                        <button type="button" service="illustration" class="div-link w-100 btn btn-lg btn-outline-black">Select this service</button>
                     </div>
                 </div>
             </div>
@@ -81,99 +84,232 @@
                     </div>
                     <div class="card-body">
                         <h1 class="card-title pricing-card-title"><i class="fa-solid fa-laptop-file"></i></h1>
-                            <p>
-                                Launching a business? This design package has it all - a one-of-a-kind website, plus a business logo, printed materials and packaging.
-                            </p>
-                            <ul class="text-align-left mt-3 mb-4">
-                                <li>Website</li>
-                                <li>Branding products</li>
-                                <li>...and more!</li>
-                            </ul>
-                        <button type="button" service="full-package" class="w-100 btn btn-lg btn-outline-black">Select this service</button>
+                        <div class="card-service">
+                            Launching a business? This design package has it all - a one-of-a-kind website, plus a business logo, printed materials and packaging.
+                        </div>
+                        <ul class="text-align-left mt-3 mb-4">
+                            <li>Website</li>
+                            <li>Branding products</li>
+                            <li>...and more!</li>
+                        </ul>
+
+                        <button type="button" service="fullpackage" class="div-link w-100 btn btn-lg btn-outline-black">Select this service</button>
                     </div>
                 </div>
             </div>
 
         </div>
 
-        <button type="button" class="w-100 btn btn-lg btn-outline-black" onclick="document.getElementById('next').style.display='inline'">Next</button>
-
-        <div style="display:none" id="next">
-            <h2 class="display-6 text-center my-4">Select a package</h2>
-            <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+        <div style="display:none" id="branding2">
+            <div class="row mb-3">
                 <div class="col">
                     <div class="card mb-4 rounded-0 ">
                         <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal">Bronze package</h4>
+                            <h4 class="my-0 fw-normal">What do you need?</h4>
+                            <h5 class="fs-5 text-muted">You may select more than one</h5>
                         </div>
                         <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$30</h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>Bronze</li>
-                                <li>Bronze</li>
-                                <li>Bronze</li>
-                                <li>Bronze</li>
-                            </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-outline-black">Select this package</button>
-                        </div>
-                    </div>
-                </div>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Logo design</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Promotional design (for brochures, flyers, social media banners...)</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Stationary design (letterheads, business cards, envelopes...)</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Packaging design (shipping boxes, paper bags...)</span>
+                            </label>
+                            
+                            <p class="fs-5 my-3 text-muted">If the product you're looking for is not here, <a href="{% url 'home' %}#contact">get in touch</a></p>
 
-                <div class="col">
-                    <div class="card mb-4 rounded-0 ">
-                        <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal">Silver package</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$45</h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>Silver</li>
-                                <li>Silver</li>
-                                <li>Silver</li>
-                                <li>Silver</li>
-                            </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-outline-black">Select this package</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card mb-4 rounded-0">
-                        <div class="card-header py-3">
-                            <h4 class="my-0 fw-normal">Gold package</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$60</h1>
-                            <ul class="list-unstyled mt-3 mb-4">
-                                <li>Gold</li>
-                                <li>Gold</li>
-                                <li>Gold</li>
-                                <li>Gold</li>
-                            </ul>
-                            <button type="button" class="w-100 btn btn-lg btn-outline-black">Select this package</button>
+                            <button type="button" style="max-width:200px;" class="w-100 btn btn-lg btn-outline-black">Select this package</button>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div style="display:none" id="website2">
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="card mb-4 rounded-0 ">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">web What do you need?</h4>
+                            <h5 class="fs-5 text-muted">You may select more than one</h5>
+                        </div>
+                        <div class="card-body">
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Web design</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Promotional design (for brochures, flyers, social media banners...)</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Stationary design (letterheads, business cards, envelopes...)</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Packaging design (shipping boxes, paper bags...)</span>
+                            </label>
+                            
+                            <p class="fs-5 my-3 text-muted">If the product you're looking for is not here, <a href="{% url 'home' %}#contact">get in touch</a></p>
+
+                            <button type="button" style="max-width:200px;" class="w-100 btn btn-lg btn-outline-black">Select this package</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:none" id="illustration2">
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="card mb-4 rounded-0 ">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">What do you need?</h4>
+                            <h5 class="fs-5 text-muted">You may select more than one</h5>
+                        </div>
+                        <div class="card-body">
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>illustration design</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Promotional design (for brochures, flyers, social media banners...)</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Stationary design (letterheads, business cards, envelopes...)</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Packaging design (shipping boxes, paper bags...)</span>
+                            </label>
+                            
+                            <p class="fs-5 my-3 text-muted">If the product you're looking for is not here, <a href="{% url 'home' %}#contact">get in touch</a></p>
+
+                            <button type="button" style="max-width:200px;" class="w-100 btn btn-lg btn-outline-black">Select this package</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="display:none" id="fullpackage2">
+            <div class="row mb-3">
+                <div class="col">
+                    <div class="card mb-4 rounded-0 ">
+                        <div class="card-header py-3">
+                            <h4 class="my-0 fw-normal">What do you need?</h4>
+                            <h5 class="fs-5 text-muted">You may select more than one</h5>
+                        </div>
+                        <div class="card-body">
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>full-package design</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Promotional design (for brochures, flyers, social media banners...)</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Stationary design (letterheads, business cards, envelopes...)</span>
+                            </label>
+                            <label class="container">
+                                <input type="checkbox">
+                                <span class="checkmark"></span>
+                                <span>Packaging design (shipping boxes, paper bags...)</span>
+                            </label>
+                            
+                            <p class="fs-5 my-3 text-muted">If the product you're looking for is not here, <a href="{% url 'home' %}#contact">get in touch</a></p>
+
+                            <button type="button" style="max-width:200px;" class="w-100 btn btn-lg btn-outline-black">Select this package</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
             <button type="button" class="w-100 btn btn-lg btn-outline-black" onclick="document.getElementById('next2').style.display='inline'">Next</button>
 
             <div style="display:none" id="next2">
-                <h2 class="display-6 text-center my-4">What you need</h2>
-                <div class="row row-cols-1 row-cols-md-3 mb-3">
+                <h2 class="display-6 text-center my-4">Select a package</h2>
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
                     <div class="col">
                         <div class="card mb-4 rounded-0 ">
                             <div class="card-header py-3">
-                                <h4 class="my-0 fw-normal">Branding design</h4>
+                                <h4 class="my-0 fw-normal">Bronze package</h4>
                             </div>
                             <div class="card-body">
                                 <h1 class="card-title pricing-card-title">$30</h1>
                                 <ul class="list-unstyled mt-3 mb-4">
-                                    <li>Branding design</li>
-                                    <li>Branding design</li>
-                                    <li>Branding design</li>
-                                    <li>Branding design</li>
+                                    <li>Bronze</li>
+                                    <li>Bronze</li>
+                                    <li>Bronze</li>
+                                    <li>Bronze</li>
                                 </ul>
-                                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Select this package</button>
+                                <button type="button" class="w-100 btn btn-lg btn-outline-black">Select this package</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card mb-4 rounded-0 ">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal">Silver package</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$45</h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Silver</li>
+                                    <li>Silver</li>
+                                    <li>Silver</li>
+                                    <li>Silver</li>
+                                </ul>
+                                <button type="button" class="w-100 btn btn-lg btn-outline-black">Select this package</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-4 rounded-0">
+                            <div class="card-header py-3">
+                                <h4 class="my-0 fw-normal">Gold package</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$60</h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>Gold</li>
+                                    <li>Gold</li>
+                                    <li>Gold</li>
+                                    <li>Gold</li>
+                                </ul>
+                                <button type="button" class="w-100 btn btn-lg btn-outline-black">Select this package</button>
                             </div>
                         </div>
                     </div>

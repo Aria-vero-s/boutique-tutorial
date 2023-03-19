@@ -3,24 +3,41 @@
 
 document.addEventListener("DOMContentLoaded", function() {
     let buttons = document.getElementsByTagName("button");
+    let branding2 = document.getElementById('branding2');
+    let website2 = document.getElementById('website2');
+    let illustration2 = document.getElementById('illustration2');
+    let fullpackage2 = document.getElementById('fullpackage2');
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
             if (this.getAttribute("service") === "branding") {
-                alert("branding");
+                branding2.style.display = "inline";
+                website2.style.display = "none";
+                illustration2.style.display = "none";
+                fullpackage2.style.display = "none";
             }
             if (this.getAttribute("service") === "website") {
-                alert("website");
+                branding2.style.display = "none";
+                website2.style.display = "inline";
+                illustration2.style.display = "none";
+                fullpackage2.style.display = "none";
             }
             if (this.getAttribute("service") === "illustration") {
-                alert("illustration");
+                branding2.style.display = "none";
+                website2.style.display = "none";
+                illustration2.style.display = "inline";
+                fullpackage2.style.display = "none";
             }
-            if (this.getAttribute("service") === "full-package") {
-                alert("full-package");
+            if (this.getAttribute("service") === "fullpackage") {
+                branding2.style.display = "none";
+                website2.style.display = "none";
+                illustration2.style.display = "none";
+                fullpackage2.style.display = "inline";
             }
         });
     }
 });
+
 
 function displayNext() {
 
