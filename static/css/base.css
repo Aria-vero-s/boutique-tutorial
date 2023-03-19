@@ -17,6 +17,10 @@ a:hover {
     transition: 0.3s;
 }
 
+.text-align-left {
+    text-align: left !important;
+}
+
 .fixed-top {
     background-color: #000;
 }
@@ -84,6 +88,7 @@ a:hover {
     background: white;
     color: black !important; /* use important to override link colors for <a> elements */
     border: 1px solid black;
+    border-radius: 0%;
 }
 
 .btn-outline-black:hover,
@@ -101,6 +106,10 @@ a:hover {
 .btn-black:focus {
     background: #222;
     color: white;
+}
+
+.card p {
+    min-height: 150px;
 }
 
 .content-border {
