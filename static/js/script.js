@@ -38,6 +38,38 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    let buttons = document.getElementsByTagName("button");
+    let bronze = document.getElementById('bronze');
+    let silver = document.getElementById('silver');
+    let gold = document.getElementById('gold');
+
+    for (let button of buttons) {
+        button.addEventListener("click", function() {
+            if (this.getAttribute("service") === "branding2") {
+                bronze.style.display = "inline";
+                silver.style.display = "inline";
+                gold.style.display = "inline";
+            }
+            if (this.getAttribute("service") === "website2") {
+                bronze.style.display = "inline";
+                silver.style.display = "inline";
+                gold.style.display = "inline";
+            }
+            if (this.getAttribute("service") === "illustration2") {
+                bronze.style.display = "inline";
+                silver.style.display = "inline";
+                gold.style.display = "inline";
+            }
+            if (this.getAttribute("service") === "fullpackage2") {
+                bronze.style.display = "inline";
+                silver.style.display = "inline";
+                gold.style.display = "inline";
+            }
+        });
+    }
+});
+
 
 function displayNext() {
 
