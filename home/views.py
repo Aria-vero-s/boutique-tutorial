@@ -12,10 +12,6 @@ def portfolio(request):
     return render(request, "home/portfolio.html", {})
 
 
-def quote_page2(request):
-    return render(request, "home/quote-page2.html", {})
-
-
 def print_publishing(request):
     return render(request, "home/print-publishing.html", {})
 
@@ -34,5 +30,3 @@ def full_package(request):
 
 def not_registered(request):
     return render(request, "home/not-registered.html", {})
-
-

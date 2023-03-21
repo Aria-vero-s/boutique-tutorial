@@ -154,24 +154,9 @@ def quote_created(request):
 
 
 def quote(request):
-    quotes = Quote.objects.all()
+    products = Product.objects.all()
     context = {
-        'quotes': quotes
+        'products': products
     }
-    if request.method == 'POST':
 
-        service = request.POST.get('service')
-        package = request.POST.get('package')
-
-        # Store service and package in django session:
-        request.session['service'] = service
-        request.session['package'] = package
-
-        QuoteForm = Quote.objects.get_or_create(
-            service=service,
-            package=package,
-            user=request.user,
-        )
-        messages.success(request, "Quote Created!")
-        return redirect('quote')
     return render(request, 'products/quote.html', context)

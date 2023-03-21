@@ -65,21 +65,21 @@
                             </li>
                     
                             <li class="nav-item dropdown">
-                                <a class="header-white font-weight-bold nav-link mr-5" href="#" id="design-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <a class="header-white font-weight-bold nav-link mr-5" href="{% url 'quote' %}">
                                     Graphic design
                                 </a>
-                                <div class="dropdown-menu border-0" aria-labelledby="design-link">
-                                    <a href="{% url 'print-publishing' %}" class="dropdown-item">Print & publishing designs</a>
-                                    <a href="{% url 'website' %}" class="dropdown-item">Website design</a>
-                                    <a href="{% url 'illustration' %}" class="dropdown-item">Illustration design</a>
-                                    <a href="{% url 'full-package' %}" class="dropdown-item">Full package design</a>
-                                </div>
                             </li>
                     
                             <li class="nav-item dropdown">
-                                <a class="header-white font-weight-bold nav-link mr-5" href="{% url 'portfolio' %}">
+                                <a class="header-white font-weight-bold nav-link mr-5" href="#" id="design-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Portfolio
                                 </a>
+                                <div class="dropdown-menu border-0" aria-labelledby="design-link">
+                                    <a href="{% url 'portfolio' %}" class="dropdown-item">Print & publishing designs</a>
+                                    <a href="{% url 'portfolio' %}" class="dropdown-item">Website design</a>
+                                    <a href="{% url 'portfolio' %}" class="dropdown-item">Illustration design</a>
+                                    <a href="{% url 'portfolio' %}" class="dropdown-item">Full package design</a>
+                                </div>
                             </li>
                     
                             <li class="nav-item dropdown">
